@@ -44,6 +44,8 @@ const state = {
     ]
 }
 
+// Functions needed
+
 // Filter completed todos 
 function findCompletedTodos() {
     return state.todos.filter((todo) => {
@@ -56,4 +58,21 @@ function findIncompletedTodos() {
     return state.todos.filter((todo) => {
         return !todo.completed
     })
+}
+
+// Add new todos
+function addNewTodo(todoTitle) {
+    state.todos.push({ title: todoTitle, completed: false })
+}
+
+// Delete todo
+function deleteTodo(todoTitle) {
+    state.todos = state.todos.filter((todo) => {
+        return todo.title !== todoTitle
+    })
+}
+
+// Toggle Complete in Todos
+function toggleTodo(todo) {
+    return todo.completed = !todo.completed
 }
