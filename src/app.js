@@ -47,18 +47,12 @@ let state = {
 
 
 
-function renderTodos(todoList) {
-    const liEl = document.createElement("li")
-    for (const todo in todosList) {
-        liEl.setAttribute('class', 'todo')
+// function renderTodos(todoList) {
+//     const liEl = document.createElement("li")
+//     for (const todo in todosList) {
+//         liEl.setAttribute('class', 'todo')
 
 
-    }
-    return liEl
-}
-
-const todoList = document.querySelector('.todo-list')
-
-for (const todo in todosList) {
-    todoList.append(renderTodos(todosList[todo]))
-}
+//     }
+//     return liEl
+// }
