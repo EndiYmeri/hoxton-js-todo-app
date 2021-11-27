@@ -28,31 +28,32 @@ const todoList = document.querySelector('.todo-list')
 const completedList = document.querySelector('.completed-list')
 
 
-let state = {
-    todos = [{
+const state = {
+    todos: [{
             title: "Start the project",
-            completed = true
+            completed: false
         },
         {
             title: "Work on the project",
-            completed = true
+            completed: false
         },
         {
             title: "Finish the project",
-            completed = true
+            completed: false
         }
     ]
 }
 
+// Filter completed todos 
+function findCompletedTodos() {
+    return state.todos.filter((todo) => {
+        return todo.completed
+    })
+}
 
-
-
-// function renderTodos(todoList) {
-//     const liEl = document.createElement("li")
-//     for (const todo in todosList) {
-//         liEl.setAttribute('class', 'todo')
-
-
-//     }
-//     return liEl
-// }
+// Filter incompleted todos 
+function findIncompletedTodos() {
+    return state.todos.filter((todo) => {
+        return !todo.completed
+    })
+}
